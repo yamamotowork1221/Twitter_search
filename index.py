@@ -51,4 +51,5 @@ def usertweet():
 
 # ローカルサーバー起動
 if __name__ == '__main__':
-  app.run(host=os.getenv('APP_ADDRESS', 'localhost'), port=8000)
+  port = int(os.getenv("PORT"))
+  app.run(host="0.0.0.0", port=port)
