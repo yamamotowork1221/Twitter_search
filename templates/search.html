@@ -1,0 +1,30 @@
+{%- extends "layout.html" %}
+{%- block content %}
+<section class="tweet_search">
+	<h2>ツイート検索</h2>
+	
+	<form action='/search' method='POST'>
+		<input class="text" name='input_keyword' type='text' pattern='[ぁ-んァ-ヶｦ-ﾟ一-龠０-９a-zA-Z0-9][ぁ-んァ-ヶｦ-ﾟ一-龠０-９a-zA-Z0-9\s]*$' title="記号は使えません" placeholder='検索ワード' required>
+		<br>
+		<input class="submit" type='submit' value='検索'>
+    </form>
+
+    <hr>
+
+    <ul class="search_results">
+        {% if search_results_raws_zip is not none %}
+                {% for tweet,user in search_results_raws_zip %}
+                <li>
+                    <img src="{{user.profile_image_url}}" alt="image_{{user.username}}"><br>
+                    <div>
+                        {{tweet.text}}<br>
+                        {{user.name}}@{{user.username}}<a href="https://twitter.com/{{user.username}}/status/{{tweet.id}}" target="_blank" rel="noopener noreferrer">{{tweet.created_at}}</a>
+                    </div>
+                </li>
+                {% endfor %}
+        {% else %}
+                <p>該当なし</p>
+        {% endif %}
+    </ul>
+    </section>
+{%- endblock %}

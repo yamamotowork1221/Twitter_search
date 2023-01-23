@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="Shift_JIS">
+        <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+        <title>ツイート検索</title>
+
+        <!-- #css読込 -->
+        <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" media="screen and (max-width: 670px)">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" media="screen and (min-width: 671px)">
+    </head>
+
+    <body>
+        <!-- ヘッダー -->
+        {% include "header.html" %}
+
+        <!-- メインコンテンツ -->
+        {%- block content %}{% endblock %}
+
+        <!-- フッター -->
+        {% include "footer.html" %}
+    </body>
+</html>

@@ -1,0 +1,7 @@
+###### Requirements without Version Specifiers ######`
+flask
+tweepy
+gunicorn
+python-dotenv
+
+###### Requirements with Version Specifiers ######`

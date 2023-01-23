@@ -1,0 +1,30 @@
+{%- extends "layout.html" %}
+{%- block content %}
+<section class="usertweets">
+	<h2>ユーザーツイート</h2>
+	
+	<form action='/usertweet' method='POST'>
+		<p class="mark">@</p><input class="text" name='input_keyword' type='text' pattern='[０-９a-zA-Z0-9][０-９a-zA-Z0-9_]*$' title="アルファベット､数字､アンダーバーのみ入力してください｡"  placeholder='user_id' required>
+		<br>
+		<input class="submit" type='submit' value='検索'>
+    </form>
+
+    <hr>
+    
+    <ul class="search_results">
+        {% if search_results_raws is not none %}
+                {% for tweet in search_results_raws %}
+                <li>
+                    <img src="" alt=""><br>
+                    <div>
+                        {{tweet.text}}<br>
+                        {{user_data_raws.name}}@{{user_data_raws.username}}<a href="https://twitter.com/{{user_data_raws.username}}/status/{{tweet.id}}" target="_blank" rel="noopener noreferrer">Twitterで表示</a>
+                    </div>
+                </li>
+                {% endfor %}
+        {% else %}
+                <p>該当なし</p>
+        {% endif %}
+    </ul>
+    </section>
+{%- endblock %}

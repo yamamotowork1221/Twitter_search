@@ -1,0 +1,263 @@
+@charset "Shift_JIS";
+
+:root{
+    --main-color: #77AAFF;
+}
+
+html{
+    min-height: 100%;
+    font-feature-settings: "palt";
+}
+
+body{
+    min-height: 100vh;
+    position:  relative;
+}
+
+/* header */
+header{
+    
+}
+
+header h1{
+    background: var(--main-color);
+    font-size:max(3vw,1.5em);
+    margin: 0;
+}
+
+header h1 a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header nav{
+    min-height: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size:max(1.6vw,0.9em);
+}
+
+header nav ol{
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+}
+
+header nav ol li{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header nav ol li a{
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 0.4em;
+}
+
+header nav ol li a:hover{
+    border-bottom: 3px solid var(--main-color);
+}
+
+header nav ol li a:active{
+    opacity: 0.5;
+}
+
+/* section */
+section{
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section h2{
+    font-size:max(2vw,1.5em);
+    color: var(--main-color);
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+
+section form{
+    
+}
+
+section form input.text{
+    height: 1.5em;
+    min-width: 100%;
+    color: var(--main-color);
+    font-size:max(2vw,1.5em);
+    border-width: 0px;
+    border-color: var(--main-color);
+    border-radius: 5px;
+    outline: solid 2px var(--main-color);
+    margin-bottom: 0.3em;
+}
+
+section form input.text:focus{
+    outline: solid 3px var(--main-color);
+}
+
+section form input.submit{
+    height: 1.6em;
+    color: #FFFFFF;
+    border: solid;
+    border-width: 0px;
+    background: var(--main-color);
+    border-radius: 5px;
+    outline: solid 1px var(--main-color);
+    min-width: 100%;
+    font-size:max(2vw,1.5em);
+}
+
+section form input.submit:hover{
+    color: var(--main-color);
+    background: #FFFFFF;
+}
+
+section form input.submit:active{
+    opacity: 0.7;
+}
+
+section hr{
+    height: 1px;
+    background-color: var(--main-color);
+    border: none;
+    width: 100%;
+}
+
+section ul{
+    margin: 0;
+    width: 100%;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section ul li{
+    list-style: none;
+    display: flex;
+    height: 8em;
+    min-height: calc(80px + 600px - 100vw);
+    border-radius: 5px;
+    box-shadow: 0 0 0.2em #555555;
+    margin-bottom: 0.6em;
+    font-size:max(1.2vw,0.8em);
+}
+
+section ul li img{
+    height: 90%; 
+    max-height: 15vw; 
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+section ul li div{
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #555555;
+}
+
+/* section.top_page */
+section.top_page h2{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+}
+
+section.top_page div{
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+section.top_page h3{
+    color: #555555;;
+}
+
+section.top_page p{
+    color: #555555;
+    margin-bottom: 3em;
+}
+
+/* section.tweet_search */
+section.tweet_search{
+    
+}
+
+/* section.usertweets */
+section.usertweets form input.text{
+    height: 1.5em;
+    min-width: calc(100% - 3em);
+    color: var(--main-color);
+    font-size:max(1.5em);
+    border-width: 0px;
+    border-color: var(--main-color);
+    border-radius: 5px;
+    outline: solid 2px var(--main-color);
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0.3em;
+}
+
+section.usertweets form p.mark{
+    float: left;
+    color: var(--main-color);
+    font-size:max(1.5em);
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    margin-right: calc(1em);
+    margin-left: calc(1em);
+}
+
+/* footer */
+section.bottom{
+    min-height: 6em;
+}
+
+section.nav{
+    width: 100%;
+    max-width: 100%;
+    min-height: 5em;
+    position: absolute;
+    bottom: 0;
+}
+
+section.nav nav{
+    text-align: center;
+    
+}
+
+section.nav nav a{
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+    padding-bottom: 0.4em;
+}
+
+section.nav nav a:hover{
+    border-bottom: 3px solid var(--main-color);
+}
+
+section.nav nav a:active{
+    opacity: 0.5;
+}
+
+footer{
+    background: #555555;
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+}
+
+footer p.copyright{
+    color: #FFFFFF;
+    text-align: right;
+    margin: 0;
+}
